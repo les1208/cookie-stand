@@ -1,30 +1,29 @@
 * {
 	margin: 25px;
 	padding: 25px;
-	background-color: #B3CBFF;
+	background-color:	#c09F80;
 }
 
 
 
-
 body {
-	background-color: #596580;
+	background-color: #76323F;
 
 }
 
 h1 {
 	font-size: 37px;
 	font-family: 'Courier New', Courier, monospace;
-	color: #6696FF;
+	color: #565656;
 }
 
 main {
-	color: #6696FF;
+	color: #565656;
 }
 
 footer {
 	height: 75px;
-	background: #B3CBFF;
+	background: #c09F80;
 }
 
 
