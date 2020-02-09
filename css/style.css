@@ -4,6 +4,11 @@
 	background-color:	#c09F80;
 }
 
+header {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+	border: 10px solid coral;
+}
 
 
 body {
@@ -13,7 +18,7 @@ body {
 
 h1 {
 	font-size: 37px;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: Arial, Helvetica, sans-serif;
 	color: #565656;
 }
 
@@ -21,11 +26,11 @@ main {
 	color: #565656;
 }
 
-footer {
-	height: 75px;
-	background: #c09F80;
+fieldset {
+	text-align: center;
+	width: 85%;
+	border: 10px solid coral;
 }
-
 
 
 td,
@@ -57,10 +62,19 @@ caption {
 }
 
 table {
-    border-collapse: collapse;
-    border: 2px solid coral;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: .8rem;
+	margin: 15px 0;
+	border: 10px solid coral;
+	table-layout: fixed;
+	width: 100%;
 }
+
+
+footer {
+	height: 50px;
+	background: #c09F80;
+	text-align: center;
+	border: 10px solid coral;
+	table-layout: fixed;
+}
+
 
