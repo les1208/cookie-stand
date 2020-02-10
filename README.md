@@ -7,3 +7,6 @@
 2/6 uploaded the salmon picture and the other six. Put in locations, store hours, along with locations.]
 
 2/8 fixed table, added form, and tried to add footer 
+
+2/6 8:48pm. Dipendra was the driver. We made a link on the index page for sales page. We centered the header and also worked on the font.
+
