@@ -3,6 +3,10 @@
 var dailyHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var cookieStores = [];
 
+
+
+
+
 function Stores(location, minCustomers, maxCustomers, avgCookieSale) {
   this.location = location;
   this.minCustomers = minCustomers;
@@ -57,6 +61,7 @@ var header = function () {
   times.appendChild(totalsCell);
 
 };
+
 header();
 
 var footer = function () {
@@ -68,14 +73,20 @@ var footer = function () {
   totals.appendChild(tdTotals);
 
   for (var i = 0; i < dailyHours.length; i++) {
-    var totalPerHr = 0;
+    var totalHours = 0;
     for (var j = 0; j < cookieStores.length; j++) {
-      totalPerHr += cookieStores[j].dailyCookieSales[i];
+      totalHours = totalHours + cookieStores[j].dailyCookieSales[i];
+      totalHours += cookieStores[j].dailyCookieSales[i];
     }
-    console.log('totalPerHr');
+    var tdEl = document.createElement('td');
+    tdEl.textContent = totalHours;
+    footer.appendChild(tdEl);
   }
-};
+  tdEl = document.createElement('td');
+  tdEl.textContent = totals;
+  footer.appendChild(tdEl);
 
+};
 
 
 new Stores('Seattle', 23, 65, 6.3);
@@ -104,3 +115,4 @@ cookieStores[4].cookiesEachHour();
 cookieStores[4].render();
 
 footer();
+
