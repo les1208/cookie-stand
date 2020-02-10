@@ -10,3 +10,5 @@
 
 2/6 8:48pm. Dipendra was the driver. We made a link on the index page for sales page. We centered the header and also worked on the font.
 
+
+2/9 kinda got total to work

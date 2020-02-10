@@ -4,9 +4,6 @@ var dailyHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2p
 var cookieStores = [];
 
 
-
-
-
 function Stores(location, minCustomers, maxCustomers, avgCookieSale) {
   this.location = location;
   this.minCustomers = minCustomers;
