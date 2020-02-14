@@ -14,7 +14,7 @@ header {
 
 body {
 	background-color: #76323F;
-	margin-bottom: 80%;
+	margin-bottom: 1%;
 }
 
 #family {
@@ -35,6 +35,10 @@ h1 {
 	color: #565656;
 }
 
+h2 {
+	font-size: 37px;
+}
+
 main {
 	color: #565656;
 	border: 15px;
@@ -51,7 +55,7 @@ fieldset {
 td,
 th {
 		border: 1px solid black;
-		    padding: 10px;
+		padding: 10px;
 }
 
 td {

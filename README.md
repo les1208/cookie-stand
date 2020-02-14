@@ -12,3 +12,5 @@
 
 
 2/9 kinda got total to work
+
+2/13 worked on removing html object from total. Messed with event listener. 

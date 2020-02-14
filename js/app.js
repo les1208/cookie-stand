@@ -113,31 +113,33 @@ cookieStores[4].calculateCustomers();
 cookieStores[4].cookiesEachHour();
 cookieStores[4].render();
 
-footer();
+
 
 
 var userForm = document.getElementById('user-form');
 
 
-function handleSubmit(e) {
+function handleNewSubmit(event) {
   event.preventDefault();
 
-  var stLocation = e.target.elementLocation.value;
-  var minCust = e.target.elementMinCust.value;
-  var maxCust = e.target.elementMaxCust.value;
-  var avgSales = e.target.elementAvgSales.value;
+  var stLocation = event.target.elementLocation.value;
+  var minCust = event.target.elementMinCust.value;
+  var maxCust = event.target.elementMaxCust.value;
+  var avgSales = event.target.elementAvgSales.value;
 
   userData.push(stLocation, minCust, maxCust, avgSales);
   console.log('stLocation', 'minCust', 'maxCust', 'avgSales');
 
-  e.target.elementLocation.value = null;
-  e.target.elementMinCust.value = null;
-  e.target.elementMaxCust.value = null;
-  e.target.elementAvgSales.value = null;
+  event.target.elementLocation.value = null;
+  event.target.elementMinCust.value = null;
+  event.target.elementMaxCust.value = null;
+  event.target.elementAvgSales.value = null;
 
 
 
 
 }
-userForm.addEventListener('submit', 'handleSubmit');
+footer();
+handleNewSubmit();
+userForm.addEventListener('submit', 'handleNewSubmit');
 
