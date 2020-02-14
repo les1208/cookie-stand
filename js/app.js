@@ -2,6 +2,7 @@
 
 var dailyHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var cookieStores = [];
+var userData = [];
 
 
 function Stores(location, minCustomers, maxCustomers, avgCookieSale) {
@@ -35,7 +36,7 @@ Stores.prototype.render = function () {
     liEl.textContent = this.dailyCookieSales[i] + ' cookies ';
     rowEl.appendChild(liEl);
   }
-  var dailyTotals = document.createElement('td');
+  var dailyTotals = document.createElement('th');
   dailyTotals.textContent = 'Total: ' + this.total;
   rowEl.appendChild(dailyTotals);
 };
@@ -63,25 +64,26 @@ header();
 
 var footer = function () {
   var footer = document.getElementById('sales');
-  var totals = document.createElement('tr');
+  var totals = document.createElement('td');
   footer.appendChild(totals);
-  var tdTotals = document.createElement('td');
+  var tdTotals = document.createElement('tr');
   tdTotals.textContent = 'Total';
   totals.appendChild(tdTotals);
 
   for (var i = 0; i < dailyHours.length; i++) {
     var totalHours = 0;
     for (var j = 0; j < cookieStores.length; j++) {
-      totalHours = totalHours + cookieStores[j].dailyCookieSales[i];
+      var allStoreHours = 0;
       totalHours += cookieStores[j].dailyCookieSales[i];
     }
     var tdEl = document.createElement('td');
     tdEl.textContent = totalHours;
     footer.appendChild(tdEl);
   }
-  tdEl = document.createElement('td');
-  tdEl.textContent = totals;
-  footer.appendChild(tdEl);
+
+  tdEl = document.createElement('tr');
+  tdEl.textContent = totalHours;
+  footer.appendChild(allStoreHours);
 
 };
 
@@ -112,4 +114,30 @@ cookieStores[4].cookiesEachHour();
 cookieStores[4].render();
 
 footer();
+
+
+var userForm = document.getElementById('user-form');
+
+
+function handleSubmit(e) {
+  event.preventDefault();
+
+  var stLocation = e.target.elementLocation.value;
+  var minCust = e.target.elementMinCust.value;
+  var maxCust = e.target.elementMaxCust.value;
+  var avgSales = e.target.elementAvgSales.value;
+
+  userData.push(stLocation, minCust, maxCust, avgSales);
+  console.log('stLocation', 'minCust', 'maxCust', 'avgSales');
+
+  e.target.elementLocation.value = null;
+  e.target.elementMinCust.value = null;
+  e.target.elementMaxCust.value = null;
+  e.target.elementAvgSales.value = null;
+
+
+
+
+}
+userForm.addEventListener('submit', 'handleSubmit');
 
